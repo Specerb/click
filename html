@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Score Clicker Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Score Clicker</h1>
+    </header>
+    <main>
+        <div class="score-container">
+            <h2>Your Score: <span id="score">0</span></h2>
+            <button id="clickButton">Click Me!</button>
+        </div>
+        <section class="leaderboard">
+            <h2>World Leaderboard</h2>
+            <ol id="worldLeaderboard">
+                <!-- World leaderboard entries will be dynamically added here -->
+            </ol>
+            <h2>National Leaderboard</h2>
+            <ol id="nationalLeaderboard">
+                <!-- National leaderboard entries will be dynamically added here -->
+            </ol>
+            <h2>Country Leaderboard</h2>
+            <ol id="countryLeaderboard">
+                <!-- Country leaderboard entries will be dynamically added here -->
+            </ol>
+        </section>
+    </main>
+    <script>
+        let score = 0;
+
+        function updateScore() {
+            score++;
+            document.getElementById("score").textContent = score;
+        }
+
+        document.getElementById("clickButton").addEventListener("click", updateScore);
+    </script>
+</body>
+</html>
 
